@@ -1,0 +1,59 @@
+@mixin btn-style {
+    height: 46px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(180deg, #4ADFFC, #22B1CC);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 0 1px 1px 1px #1C99B1;
+    &:hover {
+        transition: 0.3s all;
+        background: #fff;
+        color: #1EACC7;
+    }
+    &:active {
+        background: linear-gradient(180deg, #4ADFFC, #22B1CC);
+        color: #fff;
+    }
+}
+@mixin label-style {
+    height: 27px;
+    width: 115px;
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+@mixin title-style {
+    font-size: 38px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    @media (max-width: 991px) {
+        font-size: 36px;
+    }
+    @media (max-width: 767px) {
+        font-size: 27px;
+    }
+    @media (max-width: 575px) {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+@mixin title-descr-style {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 20px;
+    @media (max-width: 991px) {
+        font-size: 15px;
+    }
+}

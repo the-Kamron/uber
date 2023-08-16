@@ -1,0 +1,331 @@
+// 1200 992 768 576 320
+// 1200 - 992
+// 991 - 768
+// 767 - 576
+// 575 - 320
+
+@media (max-width: 1200px) {
+    .promo {
+        .promo_header {
+            .header_items {
+                .header_call {
+                    .call_descr {
+                        font-size: 11px;
+                    }
+                    .call_number {
+                        font-size: 17px;
+                    }
+                }
+                .header_btn {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .mobile {
+        .mobile_items {
+            .mobile_content {
+                min-height: 900px;
+                justify-content: space-around;
+            }
+        }
+    }
+    .footer {
+        .footer_items {
+            flex-direction: column;
+            .footer_social {
+                position: static;
+                order: 3;
+                margin-top: 10px;
+            }
+            .footer_text {
+                order: 1;
+            }
+            .footer_links {
+                position: static;
+                order: 2;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        .header_menu {
+            li {
+                a {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+    .promo {
+        .promo_content {
+            .promo_items {
+                .promo_title {
+                    font-size: 45px;
+                }
+                .promo_subtitle {
+                    font-size: 29px;
+                }
+            }
+        }
+    }
+    .car {
+        .car_dark {
+            .dark_items {
+                .car_img {
+                    width: 650px;
+                }
+            }
+        }
+    }
+    .rules {
+        .rules_items {
+            .rules_blue {
+                flex-direction: column;
+            }
+            .rules_red {
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .header {
+        .header_menu {
+            flex-direction: column;
+            height: 100vh;
+            width: 50%;
+            position: fixed;
+            left: -200%;
+            background-color: rgba(0,0,0, 0.6);
+            transition: 0.3s all;
+            li {
+                padding: 5px 0;
+                border: none;
+                a {
+                    font-size: 17px;
+                }
+            }
+        }
+        .header_menu-active {
+            transition: 0.3s all;
+            left: 0;
+        }
+        .header_hamburger {
+            width: 50px;
+            height: 25px;
+            padding: 3px 0;
+            // border: 1px solid #fff;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: 0.3s all;
+            .line {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: #fff;
+                transition: 0.3s all;
+            }
+        }
+        .header_hamburger-active {
+            transition: 0.3s all;
+            .line {
+                &:nth-child(1) {
+                    transition: 0.3s all;
+                    transform: rotate(45deg) translateX(10px);
+                }
+                &:nth-child(2) {
+                    transition: 0.3s all;
+                    display: none;
+                }
+                &:nth-child(3) {
+                    transition: 0.3s all;
+                    transform: rotate(-45deg) translateX(10px);
+                }
+            }
+        }
+    }
+    .promo {
+        .promo_header {
+            .header_items {
+                .header_logo {
+                    img {
+                        width: 100%;
+                    }
+                    .logo_descr {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        .promo_content {
+            .promo_items {
+                .promo_title {
+                    font-size: 33px;
+                }
+                .promo_subtitle {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+    .advantages {
+        .advantages_items {
+            .advantages_content {
+                min-height: 2000px;
+                .advantages_item {
+                    flex-direction: column;
+                    align-items: center;
+                    .item_round {
+                        min-height: 116px;
+                        width: 116px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .mobile {
+        .mobile_items {
+            .mobile_content {
+                min-height: 1800px;
+            }
+        }
+    }
+    .car {
+        height: 502px;
+        .car_dark {
+            .dark_items {
+                .car_img {
+                    width: 510px;
+                    margin-top: 40px;
+                }
+            }
+        }
+        .car_light {
+            display: none;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .header {
+        .header_menu {
+            li {
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .promo {
+        min-height: 400px;
+        .promo_header {
+            .header_items {
+                position: relative;
+                .header_logo {
+                    .logo_descr {
+                        display: none;
+                    }
+                }
+                .header_call {
+                    display: none;
+                }
+                .header_btn {
+                    display: none;
+                }
+                .header_little_call {
+                    position: absolute;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    .little_call {
+                        font-size: 12px;
+                        color: #fff;
+                        text-decoration: none;
+                        float: right;
+                    }
+                    .little_btn {
+                        @include btn-style;
+                        height: 22px;
+                        width: 110px;
+                        border-radius: 2px;
+                        font-size: 11px;
+                        float: right;
+                    }
+                }
+            }
+        }
+        .promo_content {
+            min-height: 400px;
+            .promo_items {
+                min-height: 400px;
+                .promo_title {
+                    font-size: 31px;
+                }
+                .promo_subtitle {
+                    font-size: 20px;
+                }
+                .promo_text {
+                    display: none;
+                }
+                .promo_btn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .advantages {
+        .advantages_items {
+            .advantages_content {
+                min-height: 2700px;
+            }
+        }
+    }
+    .car {
+        .car_dark {
+            .dark_items {
+                .car_img {
+                    width: 270px;
+                }
+            }
+        }
+    }
+    .rules {
+        .rules_items {
+            .rules_blue {
+                .rules_blue_title {
+                    font-size: 17px;
+                }
+            }
+            .rules_red {
+                .rules_red_title {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .footer {
+        .footer_items {
+            .footer_text {
+                width: 290px;
+                .footer_text-top {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+                .footer_text-bottom {
+                    a {
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
